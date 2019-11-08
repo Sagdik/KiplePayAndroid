@@ -2,80 +2,66 @@ package QA.KiplePay;
 
 import java.net.MalformedURLException;
 
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.qa.base.GmailOtp;
 import com.qa.base.KiplePayBase;
+import com.qa.pages.RegistrationPage;
+import com.qa.utility.Screenshot;
 import com.qa.utility.ScrollUtility;
+
 
 
 public class KiplePayTest extends KiplePayBase {
 	
 
+	String otp;
 	GmailOtp gmailOtp;
 	ScrollUtility scrollPage;
+	RegistrationPage registrationPage;
+	Screenshot screenshot;
 
 	@BeforeMethod
 	public void launchApp() throws MalformedURLException {
 
-		mobileSetUp();
 		gmailOtp = new GmailOtp();
 		scrollPage = new ScrollUtility() ;
+		registrationPage = new RegistrationPage();
+		screenshot = new Screenshot();
+		
+		
 
 	}
 
-	@Test
+	@Test(priority=1)
 	public void userRegistrationTest() throws InterruptedException, MalformedURLException {
 
-		driver.findElementById("com.mobi.wallet:id/tvSignUp").click();
-
-		Thread.sleep(2000);
-
-		WebElement username = driver.findElementById("com.mobi.wallet:id/edtFullName");
-		username.sendKeys("Sagar Tripathi");
-
-		WebElement useremail = driver.findElementById("com.mobi.wallet:id/edtEmail");
-		useremail.sendKeys("testqadelhi01@gmail.com");
-
-		WebElement selectCountry = driver.findElementById("com.mobi.wallet:id/tvCountry");
-		selectCountry.click();
-
-		driver.findElementByXPath(".//*[@text = 'Anguilla']").click();
-
-		WebElement userPassword = driver.findElementById("com.mobi.wallet:id/edtPassword");
-		userPassword.sendKeys("12345678sS");
-
-		WebElement userConfirmPassword = driver.findElementById("com.mobi.wallet:id/edtConfirmPassword");
-		userConfirmPassword.sendKeys("12345678sS");
+		mobileSetUp();
 		
-		WebElement signUpButton = driver.findElementById("com.mobi.wallet:id/btnSubmit");
-		signUpButton.click();
-		
-		mobileSetUp2();
-		
-		gmailOtp.getOtpDetails();
-		
-		System.out.println("out from gmail otp and goining to scrolls ");
-	
-		
-		scrollPage.scrollDown(0.9, 0.1);
-	
-		
-		String otp = driver.findElementByXPath(".//android.view.View[contains(text(),'Unlock your kiplePay account with this secret code')]").getText();
-	
-		System.out.println(otp);
-		
+		registrationPage.registrationDetails("Sam", "testqadelhi01+3@gmail.com", "12345678@sS", "12345678@sS");
 
-		
+
 		Thread.sleep(10000);
+	
+		otp = gmailOtp.getOtpDetails();
+	
+	 String otpnumberValue = otp.substring(341,347);
+	System.out.println(otpnumberValue);
+
+	Thread.sleep(2000);
+	driver.findElement(By.xpath(".//*[@resource-id ='com.mobi.wallet:id/edtVerifyCode']")).sendKeys(otpnumberValue);
+	
 	}
 
-	//@AfterMethod
-	public void closeApp() {
-
+		@AfterMethod
+		public void closeApp() {
+			
 		driver.quit();
+		
+		}
 	}
 
-}
+

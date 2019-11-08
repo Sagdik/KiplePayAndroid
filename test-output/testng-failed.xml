@@ -6,6 +6,7 @@
       <class name="QA.KiplePay.KiplePayTest">
         <methods>
           <include name="userRegistrationTest"/>
+          <include name="closeApp"/>
           <include name="launchApp"/>
         </methods>
       </class> <!-- QA.KiplePay.KiplePayTest -->

@@ -12,11 +12,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 
 public class KiplePayBase {
 
-	public static RemoteWebDriver driver;
+   public static AndroidDriver<MobileElement> driver;
 
 	File file;
 
@@ -75,30 +77,9 @@ public class KiplePayBase {
 
 		URL url = new URL("http://127.0.0.1:4723/wd/hub");
 
-		driver = new AndroidDriver<WebElement>(url, dc);
+		driver = new AndroidDriver<MobileElement>(url, dc);
 
 	}
 	
-	public void mobileSetUp2() throws MalformedURLException {
-
-		dc.setCapability("platformName", pro.getProperty("EmulatorPlatformName"));
-
-		dc.setCapability("deviceName", pro.getProperty("EmulatorDeviceName"));
-		
-		dc.setCapability("unicodeKeyboard", "true");
-		
-		dc.setCapability("resetKeyboard", "true");
-
-		dc.setCapability("udid", "emulator-5554");
-
-		dc.setCapability("appPackage", "com.google.android.gm");
-
-		dc.setCapability("appActivity", "com.google.android.gm.GmailActivity");
-
-		URL url = new URL("http://127.0.0.1:4723/wd/hub");
-
-		driver = new AndroidDriver<WebElement>(url, dc);
-
-	}
 
 }

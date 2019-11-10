@@ -1,6 +1,7 @@
+com\qa\utility\Screenshot.class
+com\qa\utility\ScrollUtility.class
+com\qa\utility\ToastMessageVerification.class
 com\qa\utility\ExtentReportsListner.class
 com\qa\pages\RegistrationPage.class
-com\qa\utility\Screenshot.class
 com\qa\base\KiplePayBase.class
-com\qa\utility\ScrollUtility.class
 com\qa\base\GmailOtp.class

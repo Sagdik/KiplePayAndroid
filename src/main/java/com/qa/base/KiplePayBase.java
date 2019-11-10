@@ -8,17 +8,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 
 public class KiplePayBase {
 
-   public static AndroidDriver<MobileElement> driver;
+	public static AndroidDriver<MobileElement> driver;
 
 	File file;
 
@@ -28,6 +25,10 @@ public class KiplePayBase {
 
 	DesiredCapabilities dc = new DesiredCapabilities();
 
+	/*
+	 * Constructor For load all file and properties file
+	 * By defaults from starting of page
+	 */
 	public KiplePayBase() {
 
 		super();
@@ -60,16 +61,24 @@ public class KiplePayBase {
 
 	}
 
+	/**
+	 * Method For Real devices
+	 * 
+	 * @throws MalformedURLException
+	 */
 	public void mobileSetUp() throws MalformedURLException {
 
-		dc.setCapability("platformName", pro.getProperty("EmulatorPlatformName"));
+		dc.setCapability("platformName", pro.getProperty("Android"));
 
-		dc.setCapability("deviceName", pro.getProperty("EmulatorDeviceName"));
-		
-		dc.setCapability("unicodeKeyboard", "true");                                     
+		dc.setCapability("deviceName", pro.getProperty("AndroidDeviceName"));
+
+		dc.setCapability("unicodeKeyboard", "true");
+
 		dc.setCapability("resetKeyboard", "true");
 
-		dc.setCapability("udid", "emulator-5554");
+		dc.setCapability("udid", "993ba090");
+
+		dc.setCapability("platformVersion", "7.1.1");
 
 		dc.setCapability("appPackage", "com.mobi.wallet");
 
@@ -80,6 +89,5 @@ public class KiplePayBase {
 		driver = new AndroidDriver<MobileElement>(url, dc);
 
 	}
-	
 
 }

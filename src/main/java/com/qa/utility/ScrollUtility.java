@@ -17,15 +17,12 @@ public class ScrollUtility extends KiplePayBase{
 	public void scrollDown(double value1,double value2) {
 	
 	Dimension dimension =driver.manage().window().getSize();
-	System.out.println(dimension);
 	
 	Double scrollheight = dimension.getHeight()*value1;
 	int scrollStart = scrollheight.intValue();
-	System.out.println(scrollStart);
 	
 	Double scrollheightEnd = dimension.getHeight()*value2;
 	int scrollEnd = scrollheightEnd.intValue();
-	System.out.println(scrollEnd);
 	
 	new TouchAction((PerformsTouchActions)driver)
 	.press(PointOption.point(0,scrollStart))

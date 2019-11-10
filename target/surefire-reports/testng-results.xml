@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="113774" started-at="2019-11-08T10:04:30Z" finished-at="2019-11-08T10:06:24Z">
+  <suite name="Suite" duration-ms="96672" started-at="2019-11-08T21:23:19Z" finished-at="2019-11-08T21:24:56Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="113774" started-at="2019-11-08T10:04:30Z" finished-at="2019-11-08T10:06:24Z">
+    <test name="Test" duration-ms="96672" started-at="2019-11-08T21:23:19Z" finished-at="2019-11-08T21:24:56Z">
       <class name="QA.KiplePay.KiplePayTest">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:QA.KiplePay.KiplePayTest@100fc185]" name="launchApp" is-config="true" duration-ms="59" started-at="2019-11-08T18:04:30Z" finished-at="2019-11-08T18:04:30Z">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:QA.KiplePay.KiplePayTest@6d78f375]" name="launchApp" is-config="true" duration-ms="16" started-at="2019-11-09T05:23:19Z" finished-at="2019-11-09T05:23:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="userRegistrationTest()[pri:1, instance:QA.KiplePay.KiplePayTest@100fc185]" name="userRegistrationTest" duration-ms="111959" started-at="2019-11-08T18:04:30Z" finished-at="2019-11-08T18:06:22Z">
+        <test-method status="PASS" signature="userRegistrationTest()[pri:1, instance:QA.KiplePay.KiplePayTest@6d78f375]" name="userRegistrationTest" duration-ms="96638" started-at="2019-11-09T05:23:19Z" finished-at="2019-11-09T05:24:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userRegistrationTest -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:QA.KiplePay.KiplePayTest@100fc185]" name="closeApp" is-config="true" duration-ms="1728" started-at="2019-11-08T18:06:22Z" finished-at="2019-11-08T18:06:24Z">
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:QA.KiplePay.KiplePayTest@6d78f375]" name="closeApp" is-config="true" duration-ms="0" started-at="2019-11-09T05:24:56Z" finished-at="2019-11-09T05:24:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->

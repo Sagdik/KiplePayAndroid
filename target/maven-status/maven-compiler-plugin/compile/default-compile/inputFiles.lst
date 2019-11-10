@@ -1,6 +1,7 @@
-H:\GIthub\KiplePay\src\main\java\com\qa\pages\RegistrationPage.java
-H:\GIthub\KiplePay\src\main\java\com\qa\utility\ExtentReportsListner.java
-H:\GIthub\KiplePay\src\main\java\com\qa\base\GmailOtp.java
-H:\GIthub\KiplePay\src\main\java\com\qa\base\KiplePayBase.java
-H:\GIthub\KiplePay\src\main\java\com\qa\utility\Screenshot.java
-H:\GIthub\KiplePay\src\main\java\com\qa\utility\ScrollUtility.java
+D:\GithubProjects\KiplePayAndroid\src\main\java\com\qa\base\KiplePayBase.java
+D:\GithubProjects\KiplePayAndroid\src\main\java\com\qa\utility\Screenshot.java
+D:\GithubProjects\KiplePayAndroid\src\main\java\com\qa\utility\ScrollUtility.java
+D:\GithubProjects\KiplePayAndroid\src\main\java\com\qa\utility\ExtentReportsListner.java
+D:\GithubProjects\KiplePayAndroid\src\main\java\com\qa\pages\RegistrationPage.java
+D:\GithubProjects\KiplePayAndroid\src\main\java\com\qa\utility\ToastMessageVerification.java
+D:\GithubProjects\KiplePayAndroid\src\main\java\com\qa\base\GmailOtp.java
